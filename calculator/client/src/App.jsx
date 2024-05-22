@@ -2,6 +2,7 @@
 import { useState, useEffect, createContext } from 'react'
 import Header from './components/Header';
 import TwpCalculator from './pages/TwpCalculator';
+import Footer from './components/Footer';
 
 // Create context for the date that the TWP ends
 const EndDateContext = createContext(null);
@@ -13,6 +14,7 @@ function App() {
     <>
       <Header />
       <TwpCalculator />
+      <Footer />
     </>
   )
 }
