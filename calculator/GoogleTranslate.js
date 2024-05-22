@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = 'AIzaSyDD3s4lRF8D4UXL_Rp_dgQEA_sc2Al9MmE';
-const API_URL = 'https://translation.googleapis.com/language/translate/v2';
+const API_KEY = 'AIzaSyDD3s4lRF8D4UXL_Rp_dgQEA_sc2Al9MmE'
+const API_URL = 'https://translation.googleapis.com/language/translate/v2'
 
 const translateText = async (text, targetLanguage) => {
   const response = await axios.post(
