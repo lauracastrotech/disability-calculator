@@ -8,7 +8,7 @@ export default function TwpCalculator() {
     return(
         <>
             <div className = "container">
-                <p>If you are enrolled in Ticket to Work, you know that you continue to receive disability benefits. This calculator takes your monthly income and the date that you began working. It will give you then month that you may lose your benefit.</p>
+                <p className="m-2">If you are enrolled in Ticket to Work, you know that you continue to receive disability benefits. This calculator takes your monthly income and the date that you began working. It will give you then month that you may lose your benefit.</p>
                 
                 <div className="row">
                     <div className="col-6">
