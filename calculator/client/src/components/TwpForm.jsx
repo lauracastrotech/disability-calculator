@@ -1,8 +1,15 @@
-import { useState } from "react";
+import{ TwpDateContext } from "../App"
+import { useContext, useState } from "react";
+
+
+// GETTING WARNING THAT VALUE PROP IS REQUIRED FOR CONTEXT PROVIDER
+
 
 // Create form that has two inputs and one button
 export default function TwpForm() {
-
+    // console.log(TwpDateContext);
+    const twpDate = useContext(TwpDateContext);
+   
     const EMPTY_USER_FORM = {
         firstName: '',
         lastName: '',
@@ -13,7 +20,6 @@ export default function TwpForm() {
     const [newUser, setNewUser] = useState(EMPTY_USER_FORM);
 
     function handleChange(event) {
-        console.log(event.target.name);
 
         const name = event.target.name; 
         const value = event.target.value; 
@@ -22,10 +28,10 @@ export default function TwpForm() {
       
       }
     
-
     function handleSubmit(event) {
         event.preventDefault(); //important to always include this
         console.log(newUser);
+        // console.log(twpDate);
         // update user data - function should be defined in App component
         // addUserTwp
         
@@ -37,7 +43,7 @@ export default function TwpForm() {
                 <form>
                     <div className="form-group m-2">
                         <label htmlFor="firstName" className="mb-1">First Name</label>
-                        <input type="text" className="form-control" name="firstName" 
+                        <input type="text" className="form-control" name="firstName"
                                value={newUser.firstName} 
                                id="firstName" 
                                onChange= {(e)=> handleChange(e)}
