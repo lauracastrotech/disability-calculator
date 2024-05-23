@@ -39,16 +39,16 @@ export default function TwpForm() {
                         <label htmlFor="firstName" className="mb-1">First Name</label>
                         <input type="text" className="form-control" name="firstName" 
                                value={newUser.firstName} 
-                               id="firstname" 
+                               id="firstName" 
                                onChange= {(e)=> handleChange(e)}
                         />
                     </div>
 
                     <div className="form-group m-2">
-                        <label htmlFor="lastname" className="mb-1">Last Name</label>
+                        <label htmlFor="lastName" className="mb-1">Last Name</label>
                         <input type="text" className="form-control" name="lastName" 
                                value={newUser.lastName}
-                               id="lastname" 
+                               id="lastName" 
                                onChange= {(e)=> handleChange(e)}
                         />
                     </div>
