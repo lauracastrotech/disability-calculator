@@ -13,8 +13,8 @@ SET foreign_key_checks = 1;
 
 CREATE TABLE `twp_dates`(
     `twp_id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `start_date` DATE NOT NULL,
-    `twp_date` INT NOT NULL,
+    `employ_date` DATE NOT NULL,
+    `twp_date` DATE NOT NULL,
     `income` INT NOT NULL
 );
 CREATE TABLE `users`(
@@ -34,7 +34,7 @@ VALUES
   ('Janelle', 'Monae'), 
   ('Erykah', 'Badu');
 
-INSERT INTO twp_dates(start_date, twp_date, income) 
+INSERT INTO twp_dates(employ_date, twp_date, income) 
 VALUES 
   ('2024-01-01', '2024-10-01', 1500), 
   ('2023-10-15', '2024-07-01', 1250);
