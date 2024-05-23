@@ -5,9 +5,7 @@ export default function Header() {
     return (
         <>
             <div className="container">
-                <h4>
-                    Learn More
-                </h4>
+                <p className="m-2 text-center">Need more information?</p>
             </div>
         </>
     )

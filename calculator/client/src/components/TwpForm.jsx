@@ -1,30 +1,78 @@
+import { useState } from "react";
+
 // Create form that has two inputs and one button
 export default function TwpForm() {
+
+    const EMPTY_USER_FORM = {
+        firstName: '',
+        lastName: '',
+        startDate: '',
+        incomeInput: ''
+      };
+
+    const [newUser, setNewUser] = useState(EMPTY_USER_FORM);
+
+    function handleChange(event) {
+        console.log(event.target.name);
+
+        const name = event.target.name; 
+        const value = event.target.value; 
+    
+        setNewUser((state) => ({...state, [name]:value}))
+      
+      }
+    
+
+    function handleSubmit(event) {
+        event.preventDefault(); //important to always include this
+        console.log(newUser);
+        // update user data - function should be defined in App component
+        // addUserTwp
+        
+      }
 
     return (
         <>
             <div className = "container">
                 <form>
                     <div className="form-group m-2">
-                        <label htmlFor="firstname">First Name</label>
-                        <input type="text" className="form-control" id="firstname" />
+                        <label htmlFor="firstName" className="mb-1">First Name</label>
+                        <input type="text" className="form-control" name="firstName" 
+                               value={newUser.firstName} 
+                               id="firstname" 
+                               onChange= {(e)=> handleChange(e)}
+                        />
                     </div>
+
                     <div className="form-group m-2">
-                        <label htmlFor="lastname">Last Name</label>
-                        <input type="text" className="form-control" id="lastname" />
+                        <label htmlFor="lastname" className="mb-1">Last Name</label>
+                        <input type="text" className="form-control" name="lastName" 
+                               value={newUser.lastName}
+                               id="lastname" 
+                               onChange= {(e)=> handleChange(e)}
+                        />
                     </div>
+
                     <div className="form-group m-2">
-                        <label htmlFor="startDate">Date of Employment</label>
-                        
-                        <input type="date" className="form-control" id="startDate" aria-describedby="startDateHelp" placeholder="Enter the date that you started to work." />
-                        {/* <small id="startDateHelp" className="form-text text-muted">If you are not sure, you can use the date of your first day.</small> */}
+                        <label htmlFor="startDate" className="mb-1">Date of Employment</label>
+                        <input type="date" className="form-control" name="startDate" 
+                               value={newUser.startDate} 
+                               id="startDate"
+                               onChange= {(e)=> handleChange(e)}
+                        />
                     </div>
+
                     <div className="form-group m-2">
-                        <label htmlFor="incomeInput">Monthly Income ($)</label>
-                        <input type="number" className="form-control" id="incomeInput" placeholder="Monthly Income" />
+                        <label htmlFor="incomeInput" className="mb-1">Monthly Income ($)</label>
+                        <input type="number" className="form-control" name="incomeInput" 
+                               value={newUser.incomeInput}
+                               id="incomeInput"
+                               onChange= {(e)=> handleChange(e)}
+                        />
                         <small id="incomeInputHelp" className="form-text text-muted">Do not include your monthly disability benefit.</small>
                     </div>
-                    <button type="submit" className="btn btn-primary m-2">Submit</button>
+                    <button className="btn btn-primary btn-sm m-2" onClick={(e) => handleSubmit(e)}>Submit</button> 
+                    {/* type="submit" */}
                 </form>
             </div>
         </>
