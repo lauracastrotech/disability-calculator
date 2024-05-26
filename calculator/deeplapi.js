@@ -1,5 +1,6 @@
 import * as deepl from 'deepl-node';
 
+const MY_KEY = process.env.API_KEY;
 const authKey = "f63c02c5-f056-..."; // Replace with your key
 const translator = new deepl.Translator(authKey);
 const text = null;

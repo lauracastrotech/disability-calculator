@@ -1,14 +1,11 @@
-import{ TwpDateContext } from "../App"
-import { useContext, useState } from "react";
-
-
-// GETTING WARNING THAT VALUE PROP IS REQUIRED FOR CONTEXT PROVIDER
-
+/* eslint-disable no-unused-vars */
+// import{ TwpDateContext } from "../App"
+import { useState } from "react";
+import {useTwpDateContext} from '../context/TwpDateContext'
+import { DateTime } from "luxon";
 
 // Create form that has two inputs and one button
 export default function TwpForm() {
-    // console.log(TwpDateContext);
-    const twpDate = useContext(TwpDateContext);
    
     const EMPTY_USER_FORM = {
         firstName: '',
@@ -19,6 +16,10 @@ export default function TwpForm() {
 
     const [newUser, setNewUser] = useState(EMPTY_USER_FORM);
 
+    const {twpDate, setTwpDate} = useTwpDateContext();
+    const now = DateTime.now();
+    const plus9Months = now.plus({months:9});
+    
     function handleChange(event) {
 
         const name = event.target.name; 
@@ -30,10 +31,18 @@ export default function TwpForm() {
     
     function handleSubmit(event) {
         event.preventDefault(); //important to always include this
-        console.log(newUser);
-        // console.log(twpDate);
-        // update user data - function should be defined in App component
-        // addUserTwp
+        
+        // Convert startDate input to a Luxon DateTime instance 
+        let convertInput = DateTime.fromISO(newUser.startDate);
+
+        // Add 9 months
+        let afterConvert = convertInput.plus({months:9});
+
+        // console.log(`This is 9 months from now ${plus9Months}`);
+        console.log(`date input => ${newUser.startDate}`);
+        console.log(`This is the converted date input ${afterConvert}`);
+        console.log(`The previous twpDate value... ${twpDate}`);
+        
         
       }
 
