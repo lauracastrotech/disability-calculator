@@ -41,6 +41,7 @@ export default function TwpForm() {
         // console.log(`This is 9 months from now ${plus9Months}`);
         console.log(`date input => ${newUser.startDate}`);
         console.log(`This is the converted date input ${afterConvert}`);
+        setTwpDate(afterConvert);
         console.log(`The previous twpDate value... ${twpDate}`);
         
         
