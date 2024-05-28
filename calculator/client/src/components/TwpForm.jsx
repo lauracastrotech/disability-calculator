@@ -6,7 +6,12 @@ import { DateTime } from "luxon";
 
 // Create form that has two inputs and one button
 export default function TwpForm() {
-   
+    // import API key and assign it to a variable
+    // create a function to translate text with in the form
+    // const translateForm = (text) =>
+
+
+
     const EMPTY_USER_FORM = {
         firstName: '',
         lastName: '',
@@ -17,8 +22,8 @@ export default function TwpForm() {
     const [newUser, setNewUser] = useState(EMPTY_USER_FORM);
 
     const {twpDate, setTwpDate} = useTwpDateContext();
-    const now = DateTime.now();
-    const plus9Months = now.plus({months:9});
+    const now = DateTime.now(); //test adding dates
+    const plus9Months = now.plus({months:9});//add 9 month to get date the benefits will stop
     
     function handleChange(event) {
 

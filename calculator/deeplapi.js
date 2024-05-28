@@ -1,8 +1,9 @@
 import * as deepl from 'deepl-node';
 
-const MY_KEY = process.env.API_KEY;
-const authKey = "f63c02c5-f056-..."; // Replace with your key
-const translator = new deepl.Translator(authKey);
+//const authKey = "f63c02c5-f056-..."; // Replace with your key
+const API_KEY = process.env.API_KEY;
+const API_URL = process.env.API_URL;
+const translator = new deepl.Translator(API_KEY);
 const text = null;
 const lang = null;
 
@@ -12,26 +13,3 @@ const lang = null;
 })();
 export default translateText;
 
-
-
-
-
-
-// import axios from 'axios'; Google translate
-
-// const API_KEY = 'AIzaSyDD3s4lRF8D4UXL_Rp_dgQEA_sc2Al9MmE'
-// const API_URL = 'https://translation.googleapis.com/language/translate/v2'
-
-// const translateText = async (text, targetLanguage) => {
-//   const response = await axios.post(
-//     `${API_URL}?key=${API_KEY}`,
-//     {
-//       q: text,
-//       target: targetLanguage,
-//     }
-//   );
-
-//   return response.data.data.translations[0].translatedText;
-// };
-
-// export default translateText;
