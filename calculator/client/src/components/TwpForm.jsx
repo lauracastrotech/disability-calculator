@@ -6,7 +6,7 @@ import { DateTime } from "luxon";
 
 
 // Create form that has two inputs and one button
-export default function TwpForm({getTranslate}) {
+export default function TwpForm() {
     // import API key and assign it to a variable
     // create a function to translate text with in the form
     // const translateForm = (text) =>
@@ -16,7 +16,7 @@ export default function TwpForm({getTranslate}) {
     const EMPTY_USER_FORM = {
         firstName: '',
         lastName: '',
-        startDate: '',
+        employDate: '',
         incomeInput: ''
       };
 
@@ -36,14 +36,14 @@ export default function TwpForm({getTranslate}) {
     function handleSubmit(event) {
         event.preventDefault(); //important to always include this
         
-        // Convert startDate input to a Luxon DateTime instance 
-        let convertInput = DateTime.fromISO(newUser.startDate);
+        // Convert employDate input to a Luxon DateTime instance 
+        let convertInput = DateTime.fromISO(newUser.employDate);
 
         // Add 9 months
         let afterConvert = convertInput.plus({months:9});
 
         // console.log(`This is 9 months from now ${plus9Months}`);
-        console.log(`date input => ${newUser.startDate}`);
+        console.log(`date input => ${newUser.employDate}`);
         console.log(`This is the converted date input ${afterConvert}`);
         setTwpDate(afterConvert);
         console.log(`The previous twpDate value... ${twpDate}`);
@@ -74,10 +74,10 @@ export default function TwpForm({getTranslate}) {
                     </div>
 
                     <div className="form-group m-2">
-                        <label htmlFor="startDate" className="mb-1">Date of Employment</label>
-                        <input type="date" className="form-control" name="startDate" 
-                               value={newUser.startDate} 
-                               id="startDate"
+                        <label htmlFor="employDate" className="mb-1">Date of Employment</label>
+                        <input type="date" className="form-control" name="employDate" 
+                               value={newUser.employDate} 
+                               id="employDate"
                                onChange= {(e)=> handleChange(e)}
                         />
                     </div>

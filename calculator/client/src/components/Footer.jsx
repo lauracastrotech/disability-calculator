@@ -1,6 +1,6 @@
 // Add link to pdf with details about ticket to work
 
-export default function Header() {
+export default function Footer() {
 
     return (
         <>

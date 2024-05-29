@@ -2,15 +2,28 @@
 import { createContext, useContext, useState } from 'react'
 import axios from 'axios';
 
+// This file should have translation-related stae and functions
+
+
 // Create context 
 const TranslationContext = createContext(null);
+
+// This is a custom hook that allows ay component to access the translation context
+const useTranslationContext = () => useContext(TranslationContext);
 
 // Create context provider
 const TranslationProvider = ({children}) => {
 
   // initialize the state that will be passed to value
-  const [language, setLanguage] = useState('EN');
-  // formText, headerText, footerText, twpDate text, boolean to toggle between languages?
+  const [language, setLanguage] = useState('EN'); // this state is the language to be translated
+  const [descriptionText, setDescriptionText] = useState('');
+  const [formLabelText, setLabelText] = useState({
+                                            firstName: '',
+                                            lastName: '',
+                                            employDate: null
+                                        })
+  const [footerText, setfooterText] = useState('')
+  // possibly need a state var for the languages based on what the user selects
   
   return(
     <TranslationContext.Provider value={{language, setLanguage}}>
@@ -18,8 +31,5 @@ const TranslationProvider = ({children}) => {
     </TranslationContext.Provider>
   )
 }
-
-// Export this to use and update state throughout the application
-const useTranslationContext = () => useContext(TranslationContext);
 
 export {TranslationProvider, useTranslationContext};
