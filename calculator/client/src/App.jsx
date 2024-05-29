@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState, useEffect, useContext, createContext } from 'react'
-import {getTwpDate} from './utilities/twpDateUtils';
 import Header from './components/Header';
 import Languages from "./components/Languages"
 import TwpForm from './components/TwpForm';
 import TwpDate from "./components/TwpDate"
 import Footer from './components/Footer';
+import {getTwpDate} from './utilities/twpDateUtils';
 import {TwpDateProvider} from './context/TwpDateContext'
+import {TranslationProvider} from './context/TranslationContext'
 
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
     getTwpDate('this is may');
   }, []);
 
-  const [language, setLanguage] = useState('EN');
-  const [translatedText, setTranslatedText] = useState('');
+  // Move state to translation context - state of language, text from different components, the language
+  // const [language, setLanguage] = useState('EN');
+  // const [translatedText, setTranslatedText] = useState('');
 
   // write function to handle translate
   // const handleTranslate (text)
@@ -40,25 +42,29 @@ function App() {
   return (
     <>
       <div className='m-4'>
-        <Header />
-        
-        <TwpDateProvider>
-            <div className = "container">
-                <Languages />
-                <div className="row">
-                    <div className="col-6">
-                        < TwpForm />
-                    </div>
-                    
-                    <div className="col-6">
-                         {/* < TwpDate /> */}
-                    </div>
-                 
-                </div>
-            </div>
-        </TwpDateProvider>
+        <TranslationProvider>
 
-        <Footer />
+          <Header />
+
+          <TwpDateProvider>
+              <div className = "container">
+                  <Languages />
+                  <div className="row">
+                      <div className="col-6">
+                          < TwpForm />
+                      </div>
+                      
+                      <div className="col-6">
+                          {/* < TwpDate /> */}
+                      </div>
+                  
+                  </div>
+              </div>
+          </TwpDateProvider>
+
+          <Footer />
+
+        </TranslationProvider>
       </div>
     </>
   )

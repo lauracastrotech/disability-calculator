@@ -1,29 +1,32 @@
 const express = require('express');
-const axios = require('axios');
+const deepl = require('deepl-node');
 const router = express.Router();
 
-// to use express server and store data in the databse you write queries here
+//  Initialize DeepL Translator
+const apiKey = process.env.API_KEY;
+const translator = new deepl.Translator(apiKey);
+
+// Create a function that translates text using the api
+const translateText = async (text, targetLang) => {
+  try {
+    const result = await translator.translateText(text, null, targetLang);
+    return result.text;
+  }
+  catch(e) {
+    console.log('Unable to translate text.');
+  }
+}
 
 // POST request to translate text
 router.post('/', async(req, res) => {
   const { text, targetLang } = req.body;
-  const apiKey = process.env.API_KEY;
 
   try {
-    const response = await axios.post('https://api-free.deepl.com/v2/translate', null, {
-      params: {
-        auth_key: apiKey,
-        text: text,
-        target_lang: targetLang
-      }
-    });
-
-    const translatedText = response.data.translations[0].text;
-    res.json({ translatedText });
+    const translatedText = await translateText(text, targetLang);
+    res.json({translatedText});
   }
-
   catch(error) {
-    res.status(500).send({error: 'There was a problem translating your text.'})
+    res.status(500).send({error: 'Something is wrong, your text failed to translate.'})
   }
 });
 
