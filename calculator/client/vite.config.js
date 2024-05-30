@@ -6,10 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/translate": "http://localhost:5000"
+      "/api": "http://localhost:5000", // this should be the same as the port in www
       }
-    // proxy: {
-    //   "/api": "http://localhost:5000"
-    // }
   }
 })

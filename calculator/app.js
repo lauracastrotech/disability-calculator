@@ -5,25 +5,29 @@ const logger = require('morgan');
 const cors = require('cors'); 
 const PORT = 5000;
 require('dotnev').config();
+const PORT = 5000;
 
-const translateRouter = require('./routes/translate');
+dotenv.config(); //do i need to add this code to components to access environment  vars
 
+const translateRouter = require('./routes/formdata'); //change this file to formdata.js
+// const formdataRouter = ''      ''
 const app = express();
 
-app.use(cors()); 
+app.use(cors());
 app.use(logger('dev'));
-app.use(express.json()); // middleware to parse JSON request
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/translate', translateRouter);
+app.use('/formdata', translateRouter); //in routes need to add this before col name ex. '/formadata/firstName'
 
-// const PORT = process.env.PORT || 3001;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on http://localhost:${PORT}`);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-  });
-// });
+});
+
+
+app.listen(PORT, () => { 
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
 
 module.exports = app;

@@ -59,3 +59,4 @@ router.get('/', async (req, res) => {
 // you need a seperate route that will insert form data to database
 
 module.exports = router;
+
