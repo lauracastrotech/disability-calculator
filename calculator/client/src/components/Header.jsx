@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 export default function Header() {
     const [translatedText, setTranslatedText] = useState('');
 
+    const apikey = process.env.API_KEY;
+
     useEffect(() => {
         const fetchTranslation = async () => {
             try {
