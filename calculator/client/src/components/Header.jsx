@@ -7,7 +7,7 @@ export default function Header() {
     useEffect(() => {
         const fetchTranslation = async () => {
             try {
-                const response = await fetch('/translate/translate');
+                const response = await fetch('/translate');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
