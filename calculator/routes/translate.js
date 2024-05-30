@@ -1,6 +1,7 @@
 const express = require('express');
 const deepl = require('deepl-node');
 const router = express.Router();
+const db = require("../model/helper"); 
 
 //  Initialize DeepL Translator
 const apiKey = process.env.API_KEY;

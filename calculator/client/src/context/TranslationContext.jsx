@@ -8,7 +8,7 @@ import axios from 'axios';
 // Create context 
 const TranslationContext = createContext(null);
 
-// This is a custom hook that allows ay component to access the translation context
+// This is a custom hook that allows any component to access the translation context
 const useTranslationContext = () => useContext(TranslationContext);
 
 // Create context provider
@@ -16,7 +16,7 @@ const TranslationProvider = ({children}) => {
 
   // initialize the state that will be passed to value
   const [language, setLanguage] = useState('EN'); // this state is the language to be translated
-  const [descriptionText, setDescriptionText] = useState('');
+  const [descriptionText, setDescriptionText] = useState(''); 
   const [formLabelText, setLabelText] = useState({
                                             firstName: '',
                                             lastName: '',
