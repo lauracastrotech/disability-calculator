@@ -3,6 +3,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors'); 
+const PORT = 5000;
 require('dotnev').config();
 
 const translateRouter = require('./routes/translate');
@@ -20,6 +21,9 @@ app.use('/translate', translateRouter);
 // const PORT = process.env.PORT || 3001;
 // app.listen(PORT, () => {
 //   console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
 // });
 
 module.exports = app;
