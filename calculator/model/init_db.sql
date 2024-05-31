@@ -11,17 +11,19 @@ SET foreign_key_checks = 1;
 -- Create Tables
 --
 
+CREATE TABLE `users`(
+    `user_id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `first_name` VARCHAR(255) NOT NULL,
+    `last_name` VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE `twp_dates`(
     `twp_id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `employ_date` DATE NOT NULL,
     `twp_date` DATE NOT NULL,
     `income` INT NOT NULL
 );
-CREATE TABLE `users`(
-    `user_id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `first_name` VARCHAR(255) NOT NULL,
-    `last_name` VARCHAR(255) NOT NULL
-);
+
 ALTER TABLE
     `twp_dates` ADD CONSTRAINT `twp_dates_twp_id_foreign` FOREIGN KEY(`twp_id`) REFERENCES `users`(`user_id`);
 
