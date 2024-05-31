@@ -1,12 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const db = require("../model/helper");
 //const itemMustExist = require('../guards/itemMustExist')
 
 router.get("/", (req, res) => {
-    res.send("Welcome to the API");
-    //It is executed!
-    console.log("I will not be executed!");
+  res.send("Welcome to the API forms");
+  //It is executed!
+  console.log("I will not be executed!");
 });
 
 // For mvp demo, use JSON viewer to see that routes work
@@ -20,6 +20,5 @@ router.get("/", (req, res) => {
 // router.put(/twp_dates/:id) -- this is simple backend, this is only used if user monthly income changes, if you have time add guard of item must exist
 
 // router.delete(/users/:user_id)
-
 
 module.exports = router;
