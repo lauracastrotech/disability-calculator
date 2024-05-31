@@ -21,25 +21,13 @@ CREATE TABLE `users`(
 
 CREATE TABLE `incomes_dates`(
     `incomeId` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    -- `userId` INT,
+    `userId` INT NOT NULL,
     `monthlyIncome` INT NOT NULL,
     `twpMonths` INT NOT NULL,
     `twpDate` DATE NOT NULL
-    -- FOREIGN KEY (`userId`) REFERENCES `users`(`id`) getting syntax error when I try to add FK may 
-    -- ALTER TABLE
-    -- `twp_dates` ADD CONSTRAINT `twp_dates_twp_id_foreign` FOREIGN KEY(`twp_id`) REFERENCES `users`(`user_id`);
 );
 
---
--- Insert Users
---
+ALTER TABLE `incomes_dates`
+    ADD CONSTRAINT `userId_fk` FOREIGN KEY(`userId`) REFERENCES `users`(`id`); -- not showing userId as FK when desc incomes_dates
 
-INSERT INTO users(firstName, lastName, startWindow, endWindow) 
-VALUES 
-  ('Janelle', 'Monae', '2024-06-1', '2029-06-1'), 
-  ('Erykah', 'Badu', '2022-12-10', '2027-12-10');
 
-INSERT INTO incomes_dates(monthlyIncome, twpMonths, twpDate) 
-VALUES 
-  (1500, 9, '2025-03-01'), 
-  (1250, 9, '2023-09-10');
