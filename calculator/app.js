@@ -1,28 +1,42 @@
+
+// MISSING const createError = require("http-errors");
+
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors'); 
-const PORT = 5000;
-require('dotnev').config();
 
+// THIS IS NOT IN FULL STACK APP RANA
+// const PORT = 5000;
+// require('dotnev').config(); -- i think that you can delete
+// dotenv.config(); -- i think that you can delete
 
-dotenv.config(); //do i need to add this code to components to access environment  vars
+const formDateRouter = require('./routes/formdata'); 
 
-const translateRouter = require('./routes/formdata'); //change this file to formdata.js
-// const formdataRouter = ''      ''
 const app = express();
 
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/formdata', translateRouter); //in routes need to add this before col name ex. '/formadata/firstName'
+app.use(express.static(path.join(__dirname, "client/build")));
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+app.get("/", function(req, res, next) {
+    res.send("Access the API at path /api");
+  });
+  app.use(function myMiddleWare(req, res, next) {
+  console.log("We are in the backend!");
+  next();
+})
+
+
+app.use('/formdata', formDataRouter); //in routes need to add this before col name ex. '/formadata/firstName'
+
+// MISSING ERROR HANDLING CODE FROM DATABASE APP
+
+// THIS IS NOT IN FULL STACK APP RANA
+// app.listen(PORT, () => {
+//     console.log(`Server is running on port ${PORT}`);
+// });
 
 module.exports = app;
