@@ -4,7 +4,7 @@ const db = require("../model/helper");
 //const itemMustExist = require('../guards/itemMustExist')
 
 router.get("/", (req, res) => {
-  res.send("Welcome to the API forms");
+  res.send("Welcome to the API for your calculator");
   //It is executed!
   console.log("I will not be executed!");
 });
