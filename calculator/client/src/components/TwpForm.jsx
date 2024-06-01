@@ -45,6 +45,8 @@ export default function TwpForm() {
 
     // add endWindow to user object
     user.endWindow = convertInput.plus({ years: 5 }); // this is endWindow based on startWindow
+
+    // call addUser(user) to send data to api
   }
 
   return (

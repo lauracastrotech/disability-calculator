@@ -14,10 +14,12 @@ function App() {
     getTwpDate("this is may");
   }, []);
 
-  // addUser
-  // input => newUser object comes from form state
+  // addUser(user)
+  // input => user object comes from form state
   // output => undefined
   // try block => fetch "api/"
+
+  // deleteUser - only do this if you have time
 
   // addIncome --- do this if you have time
   // input => userId, monthlyIncome, twpDate
