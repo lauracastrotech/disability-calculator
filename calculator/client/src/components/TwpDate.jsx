@@ -1,7 +1,19 @@
+import { useEffect } from "react";
 import { useTwpDateContext } from "../context/TwpDateContext";
+import { getTwpDate } from "../utilities/twpDateUtils";
 
 export default function TwpDate() {
-  const { twpDate, setTwpDate } = useTwpDateContext();
+  const { twpDate } = useTwpDateContext();
 
-  return <>{/* for mvp presentation this component renders twp date */}</>;
+  useEffect(() => {
+    getTwpDate();
+  }, []);
+
+  return (
+    <>
+      <div className="container">
+        <h2>{twpDate}</h2>
+      </div>
+    </>
+  );
 }

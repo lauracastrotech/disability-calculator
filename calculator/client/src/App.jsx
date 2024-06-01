@@ -28,16 +28,17 @@ function App() {
     <>
       <div className="m-4">
         <Header />
-
         <TwpDateProvider>
+          <Languages />
           <div className="container">
-            <Languages />
             <div className="row">
               <div className="col-6">
                 <TwpForm />
               </div>
 
-              <div className="col-6">{/* < TwpDate /> */}</div>
+              <div className="col-6">
+                <TwpDate />
+              </div>
             </div>
           </div>
         </TwpDateProvider>

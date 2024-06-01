@@ -14,10 +14,11 @@ export default function TwpForm() {
     firstName: "",
     lastName: "",
     startWindow: "",
-    endWindow: ""
+    endWindow: "",
+    income: ""
   };
 
-  // The income and twp date will need to be it's own state - you don't have time for income piece
+  // Create income context to access value
 
   const [user, setUser] = useState(EMPTY_USER_FORM);
 
@@ -28,31 +29,29 @@ export default function TwpForm() {
     const value = event.target.value;
 
     setUser(state => ({ ...state, [name]: value }));
+    console.log(user);
   }
 
   function handleSubmit(event) {
-    event.preventDefault(); //important to always include this
+    event.preventDefault();
 
-    // Calculate twpDate
-    let convertInput = DateTime.fromISO(user.startWindow);
     // Add 9 months
-    let afterConvert = convertInput.plus({ months: 9 }); // this is twp date
-    // console.log(`This is 9 months from now ${plus9Months}`);
-    console.log(`date input => ${user.startWindow}`);
-    console.log(`This is the converted date input ${afterConvert}`);
-    setTwpDate(afterConvert);
-    console.log(`The previous twpDate value... ${twpDate}`);
+    const twpDateConvert = DateTime.fromISO(user.startWindow)
+      .plus({ months: 9 })
+      .toLocaleString(DateTime.DATE_FULL);
 
-    // add endWindow to user object
-    user.endWindow = convertInput.plus({ years: 5 }); // this is endWindow based on startWindow
+    // Update twpDate
+    setTwpDate(twpDateConvert);
+    // console.log(`The previous twpDate value... ${twpDate}`);
+    // console.log(`user info from input => ${JSON.stringify(user)}`);
 
-    // call addUser(user) to send data to api
+    // addUser(user) to api
   }
 
   return (
     <>
       <div className="container">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group m-2">
             <label htmlFor="firstName" className="mb-1">
               First Name
@@ -82,39 +81,36 @@ export default function TwpForm() {
           </div>
 
           <div className="form-group m-2">
-            <label htmlFor="employDate" className="mb-1">
+            <label htmlFor="startWindow" className="mb-1">
               Date of Employment
             </label>
             <input
               type="date"
-              className="form-control"
-              name="employDate"
-              value={user.employDate}
-              id="employDate"
+              className="form-control" //this causes an error
+              name="startWindow"
+              value={user.startWindow}
+              id="startWindow"
               onChange={e => handleChange(e)}
             />
           </div>
 
           <div className="form-group m-2">
-            <label htmlFor="incomeInput" className="mb-1">
+            <label htmlFor="income" className="mb-1">
               Monthly Income ($)
             </label>
             <input
               type="number"
               className="form-control"
-              name="incomeInput"
-              value={user.incomeInput}
-              id="incomeInput"
+              name="income"
+              value={user.income}
+              id="income"
               onChange={e => handleChange(e)}
             />
-            <small id="incomeInputHelp" className="form-text text-muted">
+            <small id="incomeHelp" className="form-text text-muted">
               Do not include your monthly disability benefit.
             </small>
           </div>
-          <button
-            className="btn btn-primary btn-sm m-2"
-            onClick={e => handleSubmit(e)}
-          >
+          <button className="btn btn-primary btn-sm m-2" type="submit">
             Submit
           </button>
           {/* type="submit" */}

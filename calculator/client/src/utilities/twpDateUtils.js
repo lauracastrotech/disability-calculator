@@ -1,3 +1,3 @@
 export const getTwpDate = () => {
-    console.log(`This will be the message on the first load or when the page is refreshed OR when the form is reset`);
-  }
+  console.log("This is called in TwpDate component useEffect");
+};
