@@ -5,11 +5,6 @@ const path = require("path");
 const logger = require("morgan");
 const cors = require("cors");
 
-// THIS IS NOT IN FULL STACK APP RANA
-// const PORT = 5000;
-// require('dotnev').config(); -- i think that you can delete
-// dotenv.config(); -- i think that you can delete
-
 const formDataRouter = require("./routes/formdata");
 
 const app = express();
@@ -31,10 +26,5 @@ app.use(function myMiddleWare(req, res, next) {
 app.use("/formdata", formDataRouter); //in routes need to add this before col name ex. '/formadata/firstName'
 
 // MISSING ERROR HANDLING CODE FROM DATABASE APP
-
-// THIS IS NOT IN FULL STACK APP RANA
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`);
-// });
 
 module.exports = app;

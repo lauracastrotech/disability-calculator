@@ -1,11 +1,7 @@
-import {useTwpDateContext} from '../context/TwpDateContext'
+import { useTwpDateContext } from "../context/TwpDateContext";
 
 export default function TwpDate() {
-    const {twpDate, setTwpDate} = useTwpDateContext();
+  const { twpDate, setTwpDate } = useTwpDateContext();
 
-    return(
-        <>
-        
-        </>
-    )
+  return <>{/* for mvp presentation this component renders twp date */}</>;
 }
