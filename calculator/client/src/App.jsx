@@ -14,12 +14,9 @@ function App() {
     getTwpDate("this is may");
   }, []);
 
-  //input => user object comes from form state
-  //output => undefined
-  //try block => fetch "api/"
   const addUser = async user => {
-    console.log("this is value of user in addUser function", user);
     try {
+      //let response = await fetch("/formdata/users", {
       let response = await fetch("/formdata/users", {
         method: "POST",
         headers: {
@@ -28,6 +25,8 @@ function App() {
         // The JSON.stringify() static method converts a JavaScript value to a JSON string
         body: JSON.stringify({ ...user })
       });
+
+      console.log("user variable passed to addUser func", user);
 
       if (response.ok) {
         let data = await response.json();
@@ -41,9 +40,6 @@ function App() {
   };
 
   // deleteUser - only do this if you have time
-
-  // addIncome --- do this if you have time
-  // input => userId, monthlyIncome, twpDate
 
   return (
     <>

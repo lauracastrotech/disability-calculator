@@ -15,8 +15,9 @@ CREATE TABLE `users`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `firstName` VARCHAR(255) NOT NULL,
     `lastName` VARCHAR(255) NOT NULL,
-    `startWindow` DATE NOT NULL,
-    `endWindow` DATE NOT NULL
+    `startWindow` DATE NOT NULL, --possible conflict with luxon formatting
+    `endWindow` DATE NOT NULL,
+    `income` INT NOT NULL
 );
 
 CREATE TABLE `incomes_dates`(

@@ -46,7 +46,8 @@ export default function TwpForm({ addUser }) {
     // console.log(`user info from input => ${JSON.stringify(user)}`);
 
     // addUser(user) to api
-    addUser(JSON.stringify(user));
+    //addUser(JSON.stringify(user));
+    addUser(user);
   }
 
   return (

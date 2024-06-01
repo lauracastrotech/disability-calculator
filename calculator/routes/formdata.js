@@ -23,14 +23,11 @@ router.get("/users", async (req, res) => {
   }
 });
 
-// SEPERATE POST REQUEST FOR INCOME "/incomes_dates/:userId" - see addIncome() function  in app.jsx
-
 router.post("/users", async (req, res) => {
   // The request's body is available in req.body
-  //const { item } = req.body; destructure properties that have the values of the form data
   const { firstName, lastName, startWindow, endWindow, income } = req.body;
-  const sqlQuery = `INSERT INTO users (firstName, lastName, startWindow, endWindow) 
-                     VALUES ('${firstName}','${lastName}','${startWindow}',${endWindow},${income})`;
+  const sqlQuery = `INSERT INTO users (firstName, lastName, startWindow, endWindow, income) 
+                     VALUES ('${firstName}','${lastName}','${startWindow}','${endWindow}','${income}')`;
   try {
     await db(sqlQuery);
     // If the query is successfull you should send back the full list of items
@@ -40,7 +37,5 @@ router.post("/users", async (req, res) => {
     res.status(500).send({ error: error.message });
   }
 });
-
-// router.delete(/users/:user_id)
 
 module.exports = router;
