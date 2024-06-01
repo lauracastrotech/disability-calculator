@@ -5,7 +5,7 @@ import { useTwpDateContext } from "../context/TwpDateContext";
 import { DateTime } from "luxon";
 
 // Create form that has two inputs and one button
-export default function TwpForm() {
+export default function TwpForm({ addUser }) {
   // import API key and assign it to a variable
   // create a function to translate text with in the form
   // const translateForm = (text) =>
@@ -46,6 +46,7 @@ export default function TwpForm() {
     // console.log(`user info from input => ${JSON.stringify(user)}`);
 
     // addUser(user) to api
+    addUser(JSON.stringify(user));
   }
 
   return (

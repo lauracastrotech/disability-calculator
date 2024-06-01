@@ -14,10 +14,31 @@ function App() {
     getTwpDate("this is may");
   }, []);
 
-  // addUser(user)
-  // input => user object comes from form state
-  // output => undefined
-  // try block => fetch "api/"
+  //input => user object comes from form state
+  //output => undefined
+  //try block => fetch "api/"
+  const addUser = async user => {
+    console.log("this is value of user in addUser function", user);
+    try {
+      let response = await fetch("/formdata/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        // The JSON.stringify() static method converts a JavaScript value to a JSON string
+        body: JSON.stringify({ ...user })
+      });
+
+      if (response.ok) {
+        let data = await response.json();
+        console.log(data);
+      } else {
+        console.log(`Server Error: ${response.status} ${response.statusText}`);
+      }
+    } catch (e) {
+      console.log(`Network error: ${e.message}`);
+    }
+  };
 
   // deleteUser - only do this if you have time
 
@@ -33,7 +54,7 @@ function App() {
           <div className="container">
             <div className="row">
               <div className="col-6">
-                <TwpForm />
+                <TwpForm addUser={addUser} />
               </div>
 
               <div className="col-6">
