@@ -1,6 +1,5 @@
 // import { useState, useEffect, useContext, createContext } from "react";
 import Header from "./components/Header";
-import Languages from "./components/Languages";
 import TwpForm from "./components/TwpForm";
 import TwpDate from "./components/TwpDate";
 import Footer from "./components/Footer";
@@ -35,7 +34,6 @@ function App() {
       <div className="m-4">
         <Header />
         <TwpDateProvider>
-          <Languages />
           <div className="container">
             <div className="row">
               <div className="col-6">
