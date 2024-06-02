@@ -9,7 +9,6 @@ import { TwpDateProvider } from "./context/TwpDateContext";
 function App() {
   const addUser = async user => {
     try {
-      //let response = await fetch("/formdata/users", {
       let response = await fetch("/formdata/users", {
         method: "POST",
         headers: {
