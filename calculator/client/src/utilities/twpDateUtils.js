@@ -1,3 +1,3 @@
 export const getTwpDate = () => {
-  console.log("This is called in TwpDate component useEffect");
+  console.log("More complex calculations will go here");
 };

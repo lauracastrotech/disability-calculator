@@ -23,7 +23,7 @@ app.use(function myMiddleWare(req, res, next) {
   next();
 });
 
-app.use("/formdata", formDataRouter); //in routes need to add this before col name ex. '/formadata/firstName'
+app.use("/formdata", formDataRouter);
 
 // MISSING ERROR HANDLING CODE FROM DATABASE APP
 

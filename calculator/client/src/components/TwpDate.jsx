@@ -1,13 +1,15 @@
+/* eslint-disable no-unused-vars */
 import { useEffect } from "react";
-import { useTwpDateContext } from "../context/TwpDateContext";
 import { getTwpDate } from "../utilities/twpDateUtils";
+import { useTwpDateContext } from "../context/TwpDateContext";
 
 export default function TwpDate() {
   const { twpDate } = useTwpDateContext();
 
-  useEffect(() => {
-    getTwpDate();
-  }, []);
+  // This renders a date
+  // useEffect(() => {
+  //   getTwpDate();
+  // }, []);
 
   return (
     <>

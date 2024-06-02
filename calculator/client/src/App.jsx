@@ -1,19 +1,12 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import { useState, useEffect, useContext, createContext } from "react";
+// import { useState, useEffect, useContext, createContext } from "react";
 import Header from "./components/Header";
 import Languages from "./components/Languages";
 import TwpForm from "./components/TwpForm";
 import TwpDate from "./components/TwpDate";
 import Footer from "./components/Footer";
-import { getTwpDate } from "./utilities/twpDateUtils";
 import { TwpDateProvider } from "./context/TwpDateContext";
 
 function App() {
-  useEffect(() => {
-    getTwpDate("this is may");
-  }, []);
-
   const addUser = async user => {
     try {
       //let response = await fetch("/formdata/users", {
@@ -22,7 +15,6 @@ function App() {
         headers: {
           "Content-Type": "application/json"
         },
-        // The JSON.stringify() static method converts a JavaScript value to a JSON string
         body: JSON.stringify({ ...user })
       });
 
@@ -39,8 +31,6 @@ function App() {
     }
   };
 
-  // deleteUser - only do this if you have time
-
   return (
     <>
       <div className="m-4">
@@ -52,14 +42,12 @@ function App() {
               <div className="col-6">
                 <TwpForm addUser={addUser} />
               </div>
-
               <div className="col-6">
                 <TwpDate />
               </div>
             </div>
           </div>
         </TwpDateProvider>
-
         <Footer />
       </div>
     </>
