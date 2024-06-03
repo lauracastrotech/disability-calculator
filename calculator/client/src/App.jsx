@@ -4,6 +4,7 @@ import TwpForm from "./components/TwpForm";
 import TwpDate from "./components/TwpDate";
 import Footer from "./components/Footer";
 import { TwpDateProvider } from "./context/TwpDateContext";
+import "./App.css";
 
 function App() {
   const addUser = async user => {
@@ -31,9 +32,9 @@ function App() {
 
   return (
     <>
-      <div className="m-3">
+      <div className="container back m-4 p-5">
         <TwpDateProvider>
-          <div className="container">
+          <div className="container calculator m-3 p-5">
             <Header />
             <div className="row">
               <div className="col-6">

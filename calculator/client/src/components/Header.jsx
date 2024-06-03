@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-// import Languages from "./Languages";
+import "../styles/headerStyles.css";
 
 export default function Header() {
   return (
     <div className="container">
       <div className="row">
         <h3 className="col-8">Ticket to Work Period Calculator</h3>
-        <button className="btn btn-primary col-2">Login</button>
-        <button className="btn btn-primary col-2">Create Account</button>
+        <button className="col-2">Login</button>
+        <button className="col-2">Create Account</button>
       </div>
       <div className="row">
         <p className="col-10">

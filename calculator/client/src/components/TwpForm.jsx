@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-// import{ TwpDateContext } from "../App"
 import { useState } from "react";
 import { useTwpDateContext } from "../context/TwpDateContext";
 import { DateTime } from "luxon";
+import "../styles/twpDateStyles.css";
 
 export default function TwpForm({ addUser }) {
   const EMPTY_USER_FORM = {
@@ -31,7 +31,9 @@ export default function TwpForm({ addUser }) {
     // Add 9 months
     const twpDateConvert = DateTime.fromISO(user.startWindow)
       .plus({ months: 9 })
-      .toLocaleString(DateTime.DATE_FULL);
+      .toLocaleString(DateTime.DATE_FULL)
+      .replace(",", "")
+      .split(" ");
 
     // Update twpDate
     setTwpDate(twpDateConvert);

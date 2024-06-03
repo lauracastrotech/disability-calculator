@@ -1,8 +1,8 @@
 #twpDateTitle {
   margin: 15px;
-  color: #22b57a;
-  font-size: 30px;
-  font-weight: bold;
+  color: rgba(34, 181, 122, 1);
+  font-size: 25px;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
   margin: 0;
   background-color: #ffffff;
 }
@@ -29,7 +28,10 @@
 }
 
 .date-result {
-  color: #22b57a;
-  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+  color: rgba(34, 181, 122, 0.75);
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
 }
