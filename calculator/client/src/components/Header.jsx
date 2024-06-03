@@ -7,7 +7,7 @@ export default function Header() {
     <div className="container hello">
       <div className="row">
         <h2 id="title" className="col-7">
-          Ticket to Work Period Calculator
+          Trial Work Period Calculator
         </h2>
         <button id="login" className="rounded col-2">
           Login
