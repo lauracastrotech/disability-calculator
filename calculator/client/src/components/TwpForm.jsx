@@ -4,12 +4,7 @@ import { useState } from "react";
 import { useTwpDateContext } from "../context/TwpDateContext";
 import { DateTime } from "luxon";
 
-// Create form that has two inputs and one button
 export default function TwpForm({ addUser }) {
-  // import API key and assign it to a variable
-  // create a function to translate text with in the form
-  // const translateForm = (text) =>
-
   const EMPTY_USER_FORM = {
     firstName: "",
     lastName: "",
@@ -17,8 +12,6 @@ export default function TwpForm({ addUser }) {
     endWindow: "",
     income: ""
   };
-
-  // Create income context to access value
 
   const [user, setUser] = useState(EMPTY_USER_FORM);
 
@@ -54,7 +47,7 @@ export default function TwpForm({ addUser }) {
     <>
       <div className="container">
         <form onSubmit={handleSubmit}>
-          <div className="form-group m-2">
+          <div className="form-group">
             <label htmlFor="firstName" className="mb-1">
               First Name
             </label>
@@ -68,7 +61,7 @@ export default function TwpForm({ addUser }) {
             />
           </div>
 
-          <div className="form-group m-2">
+          <div className="form-group">
             <label htmlFor="lastName" className="mb-1">
               Last Name
             </label>
@@ -82,7 +75,7 @@ export default function TwpForm({ addUser }) {
             />
           </div>
 
-          <div className="form-group m-2">
+          <div className="form-group">
             <label htmlFor="startWindow" className="mb-1">
               Date of Employment
             </label>
@@ -96,7 +89,7 @@ export default function TwpForm({ addUser }) {
             />
           </div>
 
-          <div className="form-group m-2">
+          <div className="form-group">
             <label htmlFor="income" className="mb-1">
               Monthly Income ($)
             </label>
@@ -115,7 +108,6 @@ export default function TwpForm({ addUser }) {
           <button className="btn btn-primary btn-sm m-2" type="submit">
             Submit
           </button>
-          {/* type="submit" */}
         </form>
       </div>
     </>

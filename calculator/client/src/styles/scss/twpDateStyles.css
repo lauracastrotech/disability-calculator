@@ -1,0 +1,35 @@
+#twpDateTitle {
+  margin: 15px;
+  color: #22b57a;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#dateContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff; /* Circle color */
+  border-radius: 50%;
+  border: 1px solid #d9d9d9; /* Outline color and thickness */
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.03); /* Drop shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-result {
+  color: #22b57a;
+  font-size: 18px;
+  text-align: center;
+}
