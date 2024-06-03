@@ -1,25 +1,33 @@
 import "../styles/footerStyles.css";
+import logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
     <>
       <div className="container row">
-        <div className="container col-6">
-          <h5 className="row col-6">Ticket to Work Period Calculator</h5>
-          <p className="row col-6">Social Media Icons</p>
+        <div className="container col-7 p-4">
+          <h5 id="head-title" className="row col-6">
+            Ticket to Work Period Calculator
+          </h5>
+          <p id="social" className="row col-6">
+            Social Media Icons
+          </p>
         </div>
-        <div className="container col-2">
-          <h5 className="row">Profile</h5>
-          <h6 className="row">Login</h6>
-          <h6 className="row">Create Account</h6>
+        <div className="container col-2 p-4">
+          <h5 className="foot-green row">Profile</h5>
+          <p className="row text-grey">Login</p>
+          <p className="row text-grey">Create Account</p>
         </div>
-        <div className="container col-2">
-          <h5 className="row">Resources</h5>
-          <h6 className="row">Factsheets</h6>
-          <h6 className="row">Work Incentive Programs</h6>
+        <div className="container col-2 p-4">
+          <h5 className="foot-green row">Resources</h5>
+          <p className="row text-grey">Factsheets</p>
+          <p className="row text-grey">Work Incentive Programs</p>
         </div>
-        <div className="container col-2">
-          <h6 className="row">Created By</h6>
+        <div className="container col-1">
+          <h6 id="foot-grey" className="row pt-4">
+            Created By
+          </h6>
+          <img id="logo" src={logo} alt="Quill Web Design Logo" />
         </div>
       </div>
     </>

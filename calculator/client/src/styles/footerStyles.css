@@ -1,0 +1,32 @@
+#head-title {
+  color: #0c1c85;
+}
+
+#head-title:hover {
+  text-decoration: underline;
+}
+
+.foot-green {
+  color: #22b57a;
+  font-size: 16px;
+}
+
+#foot-grey {
+  color: #444444;
+  font-size: 14px;
+}
+
+.text-grey {
+  color: #6b6666;
+  font-weight: 400;
+}
+
+.text-grey:hover {
+  color: #22b57a;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+#logo {
+  height: 100px;
+}

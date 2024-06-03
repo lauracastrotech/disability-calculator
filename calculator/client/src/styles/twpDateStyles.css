@@ -1,5 +1,5 @@
 #twpDateTitle {
-  margin: 15px;
+  margin: 20px;
   color: rgba(34, 181, 122, 1);
   font-size: 25px;
   font-weight: 500;
@@ -15,8 +15,8 @@
 }
 
 .circle {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-color: #ffffff; /* Circle color */
   border-radius: 50%;
   border: 1px solid #d9d9d9; /* Outline color and thickness */
