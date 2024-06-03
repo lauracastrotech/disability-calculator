@@ -11,7 +11,7 @@ export default function Footer() {
         <hr />
         <div className="container col-7 p-4">
           <p id="head-title" className="row col-6">
-            Ticket to Work Period Calculator
+            Trial Work Period Calculator
           </p>
           <div className="container row col-6">
             <img
