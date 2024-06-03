@@ -24,9 +24,9 @@ export default function Footer() {
           <p className="row text-grey">Work Incentive Programs</p>
         </div>
         <div className="container col-1">
-          <h6 id="foot-grey" className="row pt-4">
-            Created By
-          </h6>
+          {/* <p id="foot-grey" className="text-end">
+            CREATED BY
+          </p> */}
           <img id="logo" src={logo} alt="Quill Web Design Logo" />
         </div>
       </div>
