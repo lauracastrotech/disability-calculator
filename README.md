@@ -1,19 +1,10 @@
-# Ticket to Work Calculator
-
-**Badges** 
-
-Optional badges such as npm version, test and build coverage, and so on.
-
-**Summary** 
-
-One- or two-sentence description of what the module does.  
+# Trial Work Period Calculator
 
 ## Overview
 
-Optionally, include a section of one or two paragraphs with more high-level 
-information on what the module does, what problems it solves, why one would 
-use it and how.  Don't just repeat what's in the summary.
-
+Optionally, include a section of one or two paragraphs with more high-level
+information on what the module does, what problems it solves, why one would
+use it and how. Don't just repeat what's in the summary.
 
 ## Description
 
@@ -51,9 +42,9 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ```
 
-## API 
+## API
 
-Full API documentation.  
+Full API documentation.
 
 ## Credits
 
@@ -86,7 +77,7 @@ If your project has a lot of features, list them here.
 If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
 This project welcomes contributions from the community. Contributions are
-accepted using GitHub pull requests; for more information, see 
+accepted using GitHub pull requests; for more information, see
 [GitHub documentation - Creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
 For a good pull request, we ask you provide the following:
@@ -101,11 +92,11 @@ For a good pull request, we ask you provide the following:
    The command `npm run test-cov` will generate a `coverage/` folder that
    contains HTML pages of the code coverage, to better understand if everything
    you're adding is being tested.
-4. If the pull request is a new feature, please include appropriate documentation 
+4. If the pull request is a new feature, please include appropriate documentation
    in the `README.md` file as well.
 5. To help ensure that your code is similar in style to the existing code,
    run the command `npm run lint` and fix any displayed issues.
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here. What tests are included and how to run them. 
+Go the extra mile and write tests for your application. Then provide examples on how to run them here. What tests are included and how to run them.
