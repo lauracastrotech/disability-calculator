@@ -23,13 +23,14 @@ export default function Header() {
         </select>
       </div>
       <div className="row">
-        <p id="desc" className="mb-4">
+        <p id="desc" className="mt-2 mb-2">
           If you’ve started working, you continue receiving Social Security
           Disability Insurance (SSDI) up to 9 months where your monthly income
           equals or exceeds $1,110. Find out when your Trial to Work Period ends
           and prevent over payment.
         </p>
       </div>
+      <hr />
     </div>
   );
 }
