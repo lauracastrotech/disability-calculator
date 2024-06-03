@@ -23,7 +23,7 @@ app.use(function myMiddleWare(req, res, next) {
   next();
 });
 
-app.use("/formdata", formDataRouter);
+app.use("/api/formdata", formDataRouter);
 
 // MISSING ERROR HANDLING CODE FROM DATABASE APP
 

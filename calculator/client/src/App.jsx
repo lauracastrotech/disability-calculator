@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   const addUser = async user => {
     try {
-      let response = await fetch("/formdata/users", {
+      let response = await fetch("api/formdata/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
