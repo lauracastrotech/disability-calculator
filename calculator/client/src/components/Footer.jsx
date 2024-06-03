@@ -1,5 +1,8 @@
 import "../styles/footerStyles.css";
 import logo from "../assets/logo.png";
+import discord from "../assets/discord.png";
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
 
 export default function Footer() {
   return (
@@ -9,9 +12,28 @@ export default function Footer() {
           <h5 id="head-title" className="row col-6">
             Ticket to Work Period Calculator
           </h5>
-          <p id="social" className="row col-6">
-            Social Media Icons
-          </p>
+          <div className="container row col-6">
+            <img
+              id="discord"
+              className="social col-4"
+              src={discord}
+              alt="Discord"
+            />
+
+            <img
+              id="github"
+              className="social col-4"
+              src={github}
+              alt="Github Repository"
+            />
+
+            <img
+              id="linkedin"
+              className="social col-4"
+              src={linkedin}
+              alt="LinkedIn profile"
+            />
+          </div>
         </div>
         <div className="container col-2 p-4">
           <h5 className="foot-green row">Profile</h5>
@@ -24,9 +46,9 @@ export default function Footer() {
           <p className="row text-grey">Work Incentive Programs</p>
         </div>
         <div className="container col-1">
-          {/* <p id="foot-grey" className="text-end">
+          <p id="foot-grey" className="text-end">
             CREATED BY
-          </p> */}
+          </p>
           <img id="logo" src={logo} alt="Quill Web Design Logo" />
         </div>
       </div>
