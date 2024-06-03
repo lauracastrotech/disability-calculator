@@ -4,7 +4,7 @@ import "../styles/headerStyles.css";
 
 export default function Header() {
   return (
-    <div className="container">
+    <div className="container hello">
       <div className="row">
         <h2 id="title" className="col-7">
           Ticket to Work Period Calculator
@@ -23,7 +23,7 @@ export default function Header() {
         </select>
       </div>
       <div className="row">
-        <p id="desc" className="p-5">
+        <p id="desc" className="mb-4">
           If you’ve started working, you continue receiving Social Security
           Disability Insurance (SSDI) up to 9 months where your monthly income
           equals or exceeds $1,110. Find out when your Trial to Work Period ends

@@ -1,0 +1,38 @@
+#calculate-form {
+  background-color: white;
+  /* background-color: darkorange; */
+}
+
+#calculate-btn {
+  color: #0c1c85;
+  font-weight: 500;
+  border: 1px solid #22b57a;
+}
+
+form label {
+  font-size: 20px;
+  color: #000000;
+}
+
+.border-gradient {
+  position: relative;
+  padding: 5px; /* Adjust padding to control border width */
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    49deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(32, 146, 208, 1) 43%,
+    rgba(43, 228, 151, 1) 100%
+  );
+  border-radius: 5px; /* Optional: adds rounded corners to the border */
+}
+
+.form-control {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px; /* Match this to the inner radius if using rounded corners */
+  background: white; /* Input background color */
+}

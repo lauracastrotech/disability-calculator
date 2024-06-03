@@ -32,11 +32,11 @@ function App() {
 
   return (
     <>
-      <div className="container back m-4 p-5">
+      <div className="back m-4 p-5">
         <TwpDateProvider>
           <div className="container calculator rounded m-3 p-5">
             <Header />
-            <div className="row">
+            <div id="form-results" className="row mb-4">
               <div className="col-6">
                 <TwpForm addUser={addUser} />
               </div>
