@@ -1,4 +1,4 @@
-// Add link to pdf with details about ticket to work
+import "../styles/footerStyles.css";
 
 export default function Footer() {
   return (
