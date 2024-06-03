@@ -34,7 +34,7 @@ function App() {
     <>
       <div className="container back m-4 p-5">
         <TwpDateProvider>
-          <div className="container calculator m-3 p-5">
+          <div className="container calculator rounded m-3 p-5">
             <Header />
             <div className="row">
               <div className="col-6">

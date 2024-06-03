@@ -1,12 +1,43 @@
-h3,
-p,
-select {
+#title,
+#desc,
+#lang {
   color: #0c1c85;
 }
-.custom-btn {
+
+#login,
+#create-account,
+#lang {
+  border: 1px solid #d9d9d9;
+}
+#login {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px;
+  width: 100px;
+  height: 25px;
+  background-color: #ffffff;
+  color: #22b57a;
+}
+
+#create-account {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px;
+  width: 125px;
+  height: 25px;
+  background-color: #ffffff;
+  color: #22b57a;
+}
+
+#lang {
+  height: 20px;
+  margin: 5px;
+  width: 90px;
+  height: 25px;
   font-size: 12px;
-  margin: 0px;
-  width: 50px;
-  height: 50px;
-  color: blue;
+}
+
+#desc {
+  width: 100%;
+  text-align: justify;
 }

@@ -6,23 +6,29 @@ export default function Header() {
   return (
     <div className="container">
       <div className="row">
-        <h3 className="col-8">Ticket to Work Period Calculator</h3>
-        <button className="col-2">Login</button>
-        <button className="col-2">Create Account</button>
-      </div>
-      <div className="row">
-        <p className="col-10">
-          If you are enrolled in Ticket to Work, you know that you continue to
-          receive disability benefits. This calculator takes your monthly income
-          and the date that you began working. It will give you the month that
-          you will stop receiving benefits. This will help to
-        </p>
-        <select className="col-2">
+        <h2 id="title" className="col-7">
+          Ticket to Work Period Calculator
+        </h2>
+        <button id="login" className="rounded col-2">
+          Login
+        </button>
+        <button id="create-account" className="rounded col-2">
+          Create Account
+        </button>
+        <select id="lang" className="rounded col-1">
           <option value="EN">English</option>
           <option value="ES">Spanish</option>
           <option value="DE">German</option>
           <option value="FR">French</option>
         </select>
+      </div>
+      <div className="row">
+        <p id="desc" className="p-5">
+          If you’ve started working, you continue receiving Social Security
+          Disability Insurance (SSDI) up to 9 months where your monthly income
+          equals or exceeds $1,110. Find out when your Trial to Work Period ends
+          and prevent over payment.
+        </p>
       </div>
     </div>
   );

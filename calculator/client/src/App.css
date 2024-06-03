@@ -2,8 +2,15 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: red;
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    49deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(32, 146, 208, 1) 43%,
+    rgba(43, 228, 151, 1) 100%
+  );
 }
 .calculator {
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
+  background-color: white;
 }
