@@ -8,30 +8,31 @@ export default function Footer() {
   return (
     <>
       <div className="container row">
+        <hr />
         <div className="container col-7 p-4">
-          <h5 id="head-title" className="row col-6">
+          <p id="head-title" className="row col-6">
             Ticket to Work Period Calculator
-          </h5>
+          </p>
           <div className="container row col-6">
             <img
-              id="discord"
-              className="social col-4"
-              src={discord}
-              alt="Discord"
+              id="linkedin"
+              className="social col-4 p-4"
+              src={linkedin}
+              alt="LinkedIn profile"
             />
 
             <img
               id="github"
-              className="social col-4"
+              className="social col-4 p-4"
               src={github}
               alt="Github Repository"
             />
 
             <img
-              id="linkedin"
-              className="social col-4"
-              src={linkedin}
-              alt="LinkedIn profile"
+              id="discord"
+              className="social col-4 p-4"
+              src={discord}
+              alt="Discord"
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 #head-title {
   color: #0c1c85;
+  font-weight: 400;
   font-size: 20px;
 }
 
@@ -35,6 +36,4 @@
 
 .social {
   opacity: 0.07;
-  height: 25px;
-  width: 25px;
 }
