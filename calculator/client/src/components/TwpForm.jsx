@@ -48,7 +48,7 @@ export default function TwpForm({ addUser }) {
   return (
     <>
       <div id="calculate-form" className="container">
-        <form onSubmit={handleSubmit}>
+        <form autoComplete="off" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName" className="mb-1">
               First Name
