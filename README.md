@@ -37,7 +37,7 @@ Run `npm install` in the project folder to install dependencies related to Expre
 Create `.env` file in project directory and add
 
 ```
-DB_NAME=todos
+DB_NAME=disability_calculator
 DB_PASS=YOUR_PASSWORD
 ```
 
