@@ -58,7 +58,7 @@ Run `npm run migrate` in your **TERMINAL**, in the **project** folder (not your 
 - You can test your client app in `http://localhost:5173`
 - You can test your API in `http://localhost:4000/api`
 
-## UI Wireframe[need to add]
+## UI & Wireframe[need to add]
 
 Provide instructions and examples for use. Include screenshots as needed.
 
