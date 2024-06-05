@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 });
 
 //  equals '/formdata/users don't need to add /formdata (ref api.js fsdb app)
-router.get("/users", async (req, res) => {
+router.get("formdata/users", async (req, res) => {
   console.log(req.body);
   try {
     // GET data from users table and assign to result
@@ -23,7 +23,7 @@ router.get("/users", async (req, res) => {
   }
 });
 
-router.post("/users", async (req, res) => {
+router.post("formdata/users", async (req, res) => {
   // The request's body is available in req.body
   const { firstName, lastName, startWindow, endWindow, income } = req.body;
   const sqlQuery = `INSERT INTO users (firstName, lastName, startWindow, endWindow, income) 
