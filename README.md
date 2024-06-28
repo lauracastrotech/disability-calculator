@@ -75,9 +75,16 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 [DeepL](https://developers.deepl.com/docs) documentation
 [Sign up for a free API key](https://support.deepl.com/hc/en-us/articles/360019358899-Access-to-DeepL-s-API)
 
-## Credits[will update after feature extension]
+## Credits
+Laura Castro
+[LinkedIn](https://www.linkedin.com/in/lccastro/)
+[Github](https://github.com/lauracastrotech)
+[Quill Web Design](https://www.quillwebdesign.com/)
 
-List your collaborators, if any, with links to their GitHub profiles.
+Nienke Buijser
+[LinkedIn](https://www.linkedin.com/in/nienkebuijser/)
+[Github](https://github.com/NienkeDB)
+[Portfolio](https://nienkebuijser.com/)
 
 
 
