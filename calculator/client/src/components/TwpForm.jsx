@@ -34,6 +34,8 @@ export default function TwpForm({ addUser }) {
       .toLocaleString(DateTime.DATE_FULL)
       .replace(",", "")
       .split(" ");
+    //NEED TO SET END WINDOW
+    user.endWindow = "2024-05-13";
 
     // Update twpDate
     setTwpDate(twpDateConvert);
