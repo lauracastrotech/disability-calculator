@@ -84,7 +84,7 @@ Laura Castro
 Nienke Buijser
 [LinkedIn](https://www.linkedin.com/in/nienkebuijser/)
 [Github](https://github.com/NienkeDB)
-[Portfolio](https://nienkebuijser.com/)
+
 
 
 
