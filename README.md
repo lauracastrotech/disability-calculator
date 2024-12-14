@@ -2,7 +2,7 @@
 
 ## Overview
 
-There are 12 million people receiving Social Security Disability Insurance (SSDI), a program that the US government provides individuals with income to cover housing, utilities, food, and other essentials costs of living.
+There are 12 million people receiving Social Security Disability Insurance (SSDI), a program that the US government provides individuals with income to cover housing, utilities, food, and other essential costs of living.
 
 ## Description
 
