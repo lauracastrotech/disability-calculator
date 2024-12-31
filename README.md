@@ -6,7 +6,7 @@ There are 12 million people receiving Social Security Disability Insurance (SSDI
 
 ## Description
 
-Ticket to Work program incentivizes beneficiaries who return to the workforce. After starting employment, they continue receiving benefits during a Trial Work Period. This is a window up to 9 months where they can make an unlimited amount of income before they loss their benefits. There are no tools that give beneficiaries the date that they will loss benefits. This results in overpayment where the government will expect 100% recovery. Trial to Work Period calculator returns a date that users can expect to loss benefits. This prevents them from being overpaid by the government.
+Ticket to Work program incentivizes beneficiaries who return to the workforce. After starting employment, they continue receiving benefits during a Trial Work Period. This is a window up to 9 months where they can make an unlimited amount of income before they lose their benefits. There are no tools that give beneficiaries an approximate date or window that they may lose benefits. This results in overpayment where the government will expect 100% recovery. Trial to Work Period calculator returns a date that users can expect to loss benefits. This prevents them from being overpaid by the government.
 
 ## Assumptions
 
