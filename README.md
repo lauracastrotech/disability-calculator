@@ -20,7 +20,9 @@ Ticket to Work program incentivizes beneficiaries who return to the workforce. A
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Setup](#setup)
-- [UI & Wireframe](#ui)
+- [Dependencies](#Dependencies)
+- [Database Prep](#Dependencies)
+- [APIs](#APIs)
 - [Credits](#credits)
 - [License](#license)
 
@@ -58,7 +60,7 @@ Run `npm run migrate` in your **TERMINAL**, in the **project** folder (not your 
 - You can test your client app in `http://localhost:5173`
 - You can test your API in `http://localhost:4000/api`
 
-## API
+## APIs
 
 [Luxon](https://www.npmjs.com/package/luxon#luxon) documentation
 
@@ -69,7 +71,7 @@ Run `npm run migrate` in your **TERMINAL**, in the **project** folder (not your 
 Laura Castro
 [LinkedIn](https://www.linkedin.com/in/lccastro/)
 [Github](https://github.com/lauracastrotech)
-[Quill Web Design](https://www.quillwebdesign.com/)
+[Loud Tech](https://www.thisisloud.tech/)
 
 Nienke Buijser
 [LinkedIn](https://www.linkedin.com/in/nienkebuijser/)
