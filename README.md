@@ -15,9 +15,7 @@ Ticket to Work program incentivizes beneficiaries who return to the workforce. A
 - Users monthly income equals or exceeds \$1,110
 - Users income won’t change for 9 consecutive months
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents 
 
 - [Setup](#setup)
 - [Dependencies](#Dependencies)
