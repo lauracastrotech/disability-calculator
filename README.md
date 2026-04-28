@@ -12,7 +12,7 @@ Ticket to Work program incentivizes beneficiaries who return to the workforce. A
 
 - Users enrolled in Ticket to Work program through United States Social Security Administration
 - Users know the date that they began employment
-- Users monthly income equals or exceeds \$1,110
+- Users monthly income equals or exceeds \$1,110 (Substantial Gainful Activity subject to change each year)
 - Users income won’t change for 9 consecutive months
 
 ## Table of Contents 
